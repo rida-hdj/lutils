@@ -1,3 +1,4 @@
+// Copyright (c) 2026 rida-hdj
 use std::{fs, env};
 
 pub fn run() {

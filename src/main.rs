@@ -1,9 +1,11 @@
 // Copyright (c) 2026 rida-hdj
 use std::env::{self};
+
 mod pwd;
 mod mkdir;
 mod touch;
 mod cat;
+mod rm;
 
 fn main() {
     // collect args
@@ -21,6 +23,7 @@ fn main() {
         "mkdir" => mkdir::run(),
         "touch" => touch::run(),
         "cat" => cat::run(),
+        "rm" => rm::run(),
         _ => println!("there is no command {}, try help", args[1]),
     }
 }
