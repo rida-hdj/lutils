@@ -1,13 +1,19 @@
+// Copyright (c) 2026 rida-hdj
 use std::env::{self};
 mod pwd;
 mod mkdir;
 mod touch;
 
 fn main() {
+    // collect args
     let args: Vec<String> = env::args().collect();
+
+    // return if there are no subcommands
     if args.len() < 2 {
         return;
     }
+
+    // match subcommands to the right function
     match args[1].as_str() {
         "help" => help(),
         "pwd" => pwd::run(),
@@ -17,6 +23,7 @@ fn main() {
     }
 }
 
+// just a help message
 fn help() {
     println!("
 lutils
@@ -27,6 +34,7 @@ usage:
 commands:
     pwd             print the current directory
     mkdir <dir>     create a directory
+    touch <file>    create a file
 
 help:
     lutils help
