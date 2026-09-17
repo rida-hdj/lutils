@@ -4,7 +4,7 @@ use std::{env, fs};
 pub fn run() {
     // collect args
     let args: Vec<String> = env::args().collect();
-    // touch should take args[2] because env::args collect everything when lutils is running
+    // rm should take args[2] because env::args collect everything when lutils is running
 
     // repeat remove file to all args
     for i in 2..args.len() {
@@ -14,7 +14,7 @@ pub fn run() {
 
 // remove file
 fn remove_file(path: &str) {
-    // make sure if the file already exists
+    // check if the file does not exist
     if !fs::exists(path).unwrap() {
         println!("file does not exist: {}", path);
         return;
