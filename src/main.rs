@@ -6,6 +6,8 @@ mod mkdir;
 mod touch;
 mod cat;
 mod rm;
+mod rmdir;
+mod ls;
 
 fn main() {
     // collect args
@@ -24,6 +26,8 @@ fn main() {
         "touch" => touch::run(),
         "cat" => cat::run(),
         "rm" => rm::run(),
+        "rmdir" => rmdir::run(),
+        "ls" => ls::run(),
         _ => println!("there is no command {}, try help", args[1]),
     }
 }

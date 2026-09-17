@@ -15,8 +15,8 @@ pub fn run() {
 // print file content
 fn print_string(path: &str) {
     // print content
-    let read_file_resault = fs::read_to_string(path);
-    let _read_file = match read_file_resault {
+    let read_file_result = fs::read_to_string(path);
+    let _read_file = match read_file_result {
         Ok(content) => print!("{}", content),
         Err(error) => println!("lutils: cannot create file '{}': {}", path, error),
     };
