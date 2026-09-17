@@ -9,6 +9,7 @@ A collection of CLI tools that do some stuff.
 - `lutils pwd` - Tells you where you are
 - `lutils mkdir <dir>` - Makes a directory
 - `lutils touch <file>` - Creates a file. Because touching grass is overrated.
+- `lutils cat <file>` - Prints the contents of a file.
 
 > Maybe I'll add more tools later
 

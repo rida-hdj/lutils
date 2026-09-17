@@ -3,6 +3,7 @@ use std::env::{self};
 mod pwd;
 mod mkdir;
 mod touch;
+mod cat;
 
 fn main() {
     // collect args
@@ -19,6 +20,7 @@ fn main() {
         "pwd" => pwd::run(),
         "mkdir" => mkdir::run(),
         "touch" => touch::run(),
+        "cat" => cat::run(),
         _ => println!("there is no command {}, try help", args[1]),
     }
 }
